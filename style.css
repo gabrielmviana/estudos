@@ -44,7 +44,6 @@ footer {
 
 /* Aplica o estilo ao <a class="card"> */
 .card {
-  font-family: Courier New, monospace;
   display: flex;
   align-items: center;
   justify-content: center;
