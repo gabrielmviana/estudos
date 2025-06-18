@@ -1,5 +1,5 @@
 body {
-  font-family:Courier New,monospace;
+  font-family: Courier New, monospace;
   margin: 0;
   padding: 0;
   background-color: #000000;
@@ -26,4 +26,5 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+  color: #00c000; /* Se quiser o texto do footer verde também */
 }
