@@ -68,4 +68,8 @@ footer {
 
 .card h3 {
   margin: 0;
+  font-family: Courier New, monospace;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #00c000;
 }
