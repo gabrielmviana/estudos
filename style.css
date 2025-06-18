@@ -2,7 +2,7 @@ body {
   font-family:Courier New,sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #00c000;
+  background-color: #000000;
   color: #333;
 }
 
@@ -22,7 +22,7 @@ section {
 }
 
 footer {
-  background-color: #eee;
+  background-color: #000000;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
