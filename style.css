@@ -69,6 +69,10 @@ footer {
   justify-content: center;
 }
 
+.card:active {
+  transform: scale(0.98);
+}
+
 /* NOVO - garante que o texto interno (h3) também não seja sublinhado */
 .card h3 {
   margin: 0;
