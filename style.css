@@ -58,7 +58,7 @@ footer {
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card div {
@@ -99,6 +99,6 @@ footer {
 
 .card:hover {
   transform: scale(1.05);
-  animation: none; /* Pausa a flutuação durante o hover */
+  /*animation: none; /* Pausa a flutuação durante o hover */
   box-shadow: 0 0 12px #00c000;
 }
