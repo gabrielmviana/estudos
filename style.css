@@ -84,3 +84,25 @@ footer {
 .card:link, .card:visited, .card:hover, .card:active {
   text-decoration: none;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.card {
+  /* ... já existem estas propriedades ... */
+  animation: float 3s ease-in-out infinite;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  animation: none; /* Pausa a flutuação durante o hover */
+}
