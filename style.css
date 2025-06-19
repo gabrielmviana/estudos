@@ -1,5 +1,5 @@
 body {
-  font-family: Courier New, monospace;
+  font-family: "Courier New", Courier, monospace;
   margin: 0;
   padding: 0;
   background-color: #000000;
@@ -67,7 +67,7 @@ footer {
 
 .card h3 {
   margin: 0;
-  font-family: Courier New, monospace;
+  font-family: "Courier New", Courier, monospace;
   /*font-weight: bold;
   font-size: 1.2em;
   color: #00c000;
