@@ -61,15 +61,32 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+.card {
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 120px;
+  border: 2px solid #00c000;
+  border-radius: 12px;
+  background-color: #000000;
+  color: #00c000;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
+/* NOVO - garante que o texto interno (h3) também não seja sublinhado */
 .card h3 {
   margin: 0;
   font-family: "Courier New", Courier, monospace;
-  /*font-weight: bold;
-  font-size: 1.2em;
-  color: #00c000;
+  text-decoration: none;
+}
+
+/* OPCIONAL - remove sublinhado do link se o navegador insistir */
+.card:link, .card:visited, .card:hover, .card:active {
+  text-decoration: none;
 }
