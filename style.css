@@ -1,16 +1,18 @@
-/* Importa a fonte hacker-like */
+/* IMPORTA UMA FONTE MONOESPAÇADA QUE REMETE AO VISUAL DE TERMINAL */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
-/* ---------- GLOBAL ---------- */
+/* ---------- ESTILOS GERAIS DO DOCUMENTO ---------- */
+
 body {
-  font-family: "IBM Plex Mono", monospace;
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  color: #00FF88;
+  font-family: "IBM Plex Mono", monospace; /* Define a fonte principal do site */
+  margin: 0;    /* Remove margens padrão do navegador */
+  padding: 0;   /* Remove espaçamentos internos padrão */
+  background-color: #000;  /* Fundo preto para estilo hacker */
+  color: #00FF88;          /* Cor verde neon para texto geral */
 }
 
-/* ---------- ESTRUTURA ---------- */
+/* ---------- CABEÇALHO E RODAPÉ ---------- */
+
 header, footer {
   text-align: center;
   background-color: #000;
@@ -23,6 +25,8 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid #00CC66;
 }
+
+/* ---------- CONTEÚDO PRINCIPAL ---------- */
 
 main {
   padding: 2rem;
@@ -39,18 +43,21 @@ section h2 {
   color: #00FF88;
 }
 
-/* ---------- POSTAGENS ---------- */
+/* ---------- SEÇÃO DE POSTAGENS ---------- */
+
 #postagens {
   text-align: center;
 }
 
 .grid-postagens {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* Flexbox para alinhar cards lado a lado */
+  flex-wrap: wrap; /* Quebra para próxima linha se faltar espaço */
   justify-content: center;
   gap: 20px;
   margin-top: 1.5rem;
 }
+
+/* ---------- ESTILO DOS CARDS ---------- */
 
 .card {
   display: flex;
@@ -68,7 +75,7 @@ section h2 {
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 8px transparent;
-  animation: floatCard 3s ease-in-out infinite;
+  animation: floatCard 3s ease-in-out infinite; /* Animação contínua de leve flutuação */
 }
 
 .card h3 {
@@ -77,14 +84,15 @@ section h2 {
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 14px #00FF88;
+  transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+  box-shadow: 0 0 14px #00FF88; /* Efeito de brilho neon no hover */
 }
 
 .card:active {
-  transform: scale(0.98);
+  transform: scale(0.98); /* Aperta levemente ao clicar */
 }
 
+/* Remove sublinhado em qualquer estado do link */
 .card:link,
 .card:visited,
 .card:hover,
@@ -92,13 +100,15 @@ section h2 {
   text-decoration: none;
 }
 
-/* ---------- ANIMAÇÃO ---------- */
+/* ---------- ANIMAÇÃO DE FLUTUAÇÃO ---------- */
+
 @keyframes floatCard {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-6px); } /* Move levemente para cima */
 }
 
-/* ---------- PROGRESSO ---------- */
+/* ---------- BLOCO DE PROGRESSO ---------- */
+
 #progresso {
   text-align: center;
 }
@@ -111,7 +121,7 @@ section h2 {
   background-color: #000;
   border: 2px solid #00CC66;
   border-radius: 16px;
-  box-shadow: 0 0 20px #00FF88;
+  box-shadow: 0 0 20px #00FF88; /* Neon em volta do bloco */
 }
 
 .bloco-relatorio h3 {
@@ -122,17 +132,17 @@ section h2 {
   font-size: 1.2rem;
 }
 
-/* Estilo da barra de progresso externa */
+/* Estrutura da barra (fundo escuro e borda) */
 .barra-externa {
   width: 100%;
-  background-color: #111;
+  background-color: #111; /* Tom acima do preto para contraste */
   border: 1px solid #00CC66;
   border-radius: 8px;
   height: 20px;
   margin-bottom: 1rem;
 }
 
-/* Estilo da barra de progresso interna */
+/* Barra preenchida, com brilho e gradiente */
 .barra-interna {
   height: 100%;
   background: linear-gradient(90deg, #00FF88, #00CC66);
@@ -141,12 +151,13 @@ section h2 {
   box-shadow: 0 0 6px #00FF88;
 }
 
-/* Níveis personalizados por habilidade */
+/* Classes separadas para controlar o progresso de cada área */
 .nivel-si    { width: 60%; }
 .nivel-java  { width: 45%; }
 .nivel-redes { width: 50%; }
 
-/* Links visuais (como e-mail) */
+/* ---------- LINKS ---------- */
+
 a {
-  color: #00FF88;
+  color: #00FF88; /* Deixa o link verde neon como os textos */
 }
