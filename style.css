@@ -152,9 +152,9 @@ section h2 {
 }
 
 /* Classes separadas para controlar o progresso de cada área */
-.nivel-si    { width: 60%; }
-.nivel-java  { width: 45%; }
-.nivel-redes { width: 50%; }
+.nivel-si    { width: 30%; }
+.nivel-java  { width: 11%; }
+.nivel-redes { width: 30%; }
 
 /* ---------- LINKS ---------- */
 
