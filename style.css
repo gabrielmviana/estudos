@@ -99,11 +99,9 @@ footer {
 
 /* Efeito de flutuação contínuo (opcional) */
 @keyframes floatCard {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-4px); }
-  100% { transform: translateY(0px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
-
 .card {
   animation: floatCard 3s ease-in-out infinite;
 }
@@ -115,9 +113,9 @@ footer {
 }
 
 .bloco-relatorio {
-  max-width: 600px;
+  width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: #000000;
   border: 2px solid #00CC66;
   border-radius: 16px;
@@ -144,7 +142,19 @@ footer {
 
 .barra-interna {
   height: 100%;
-  background-color: #00FF88;
+  background: linear-gradient(90deg, #00FF88, #00CC66);
+  box-shadow: 0 0 6px #00FF88;
   border-radius: 8px 0 0 8px;
-  transition: width 0.8s ease-in-out;
+}
+
+section h2 {
+  text-align: center;
+  color: #00FF88;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid #00CC66;
+  padding-bottom: 2rem;
 }
