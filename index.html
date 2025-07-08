@@ -1,33 +1,40 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Indica que este é um documento HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma principal do conteúdo da página -->
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Gabriel Viana - Estudante de Segurança da Informação e Desenvolvimento Java.">
-  <title>Gabriel Viana - Portfólio</title>
+  <meta charset="UTF-8"> <!-- Garante suporte a acentuação e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Deixa o layout responsivo em dispositivos móveis -->
+  <meta name="description" content="Portfólio de Gabriel Viana - Estudante de Segurança da Informação e Desenvolvimento Java."> <!-- Ajuda mecanismos de busca a entenderem o propósito da página -->
+  <title>Gabriel Viana - Portfólio</title> <!-- Define o título que aparece na aba do navegador -->
 
-  <!-- Fonte hacker-like -->
+  <!-- Importa uma fonte monoespaçada moderna do Google Fonts (estilo "terminal") -->
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+  <!-- Conecta o arquivo externo CSS à página HTML -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- Cabeçalho -->
+  <!-- Cabeçalho fixo no topo da página -->
   <header>
+    <!-- Título principal da página (somente um <h1> por página para SEO e acessibilidade) -->
     <h1>Gabriel Viana</h1>
+    <!-- Pequena descrição sobre você -->
     <p>Futuro Desenvolvedor Java e Estudante de Segurança da Informação</p>
   </header>
 
+  <!-- Todo o conteúdo principal fica dentro da tag <main> -->
   <main>
 
-    <!-- Relatório de progresso -->
+    <!-- Seção que exibe seu progresso visual de aprendizagem -->
     <section id="progresso">
       <h2>📈 Relatório de Progresso</h2>
+      <!-- Bloco com barras de progresso -->
       <div class="bloco-relatorio">
         <h3>Segurança da Informação</h3>
+        <!-- Barra de fundo com preenchimento indicando nível de conhecimento -->
         <div class="barra-externa">
-          <div class="barra-interna nivel-si"></div>
+          <div class="barra-interna nivel-si"></div> <!-- width controlado via CSS -->
         </div>
 
         <h3>Java</h3>
@@ -42,23 +49,28 @@
       </div>
     </section>
 
-    <!-- Cards de conteúdo -->
+    <!-- Cards com links ou atalhos para conteúdos publicados -->
     <section id="postagens">
       <h2>📚 Postagens</h2>
       <div class="grid-postagens">
+        <!-- Cada card pode futuramente abrir uma nova página com conteúdos -->
         <a href="#" class="card"><h3>Linux</h3></a>
         <a href="#" class="card"><h3>Segurança da Informação</h3></a>
         <a href="#" class="card"><h3>Introdução ao Java</h3></a>
       </div>
     </section>
 
-    <!-- Sobre mim -->
+    <!-- Texto de apresentação pessoal -->
     <section>
       <h2>👤 Sobre Mim</h2>
-      <p>Atualmente trabalho como Almoxarife, mas estou em transição para a área de TI. Estudo Java, redes e segurança da informação. Este site serve para organizar e compartilhar aquilo que aprendo de forma acessível e honesta.</p>
+      <p>
+        Atualmente trabalho como Almoxarife, mas estou em transição para a área de TI. 
+        Estudo Java, redes e segurança da informação. 
+        Este site serve para organizar e compartilhar aquilo que aprendo de forma acessível e honesta.
+      </p>
     </section>
 
-    <!-- Projetos -->
+    <!-- Seção para exibir projetos em andamento ou futuros -->
     <section>
       <h2>📂 Projetos</h2>
       <ul>
@@ -67,7 +79,7 @@
       </ul>
     </section>
 
-    <!-- Contato -->
+    <!-- Contato direto via e-mail -->
     <section>
       <h2>📧 Contato</h2>
       <p>Email: <a href="mailto:gabriel.mviana@hotmail.com">gabriel.mviana@hotmail.com</a></p>
@@ -75,7 +87,7 @@
 
   </main>
 
-  <!-- Rodapé -->
+  <!-- Rodapé com direitos autorais ou créditos -->
   <footer>
     <p>© 2025 Gabriel Viana</p>
   </footer>
