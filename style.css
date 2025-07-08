@@ -109,52 +109,82 @@ section h2 {
 
 /* ---------- BLOCO DE PROGRESSO ---------- */
 
+/* Centraliza a seção inteira do progresso no meio da tela */
 #progresso {
   text-align: center;
 }
 
+/* Container que envolve todas as barras de progresso.
+   Define limites de largura, centraliza o bloco,
+   aplica padding interno e estilos visuais como bordas arredondadas e brilho externo. */
 .bloco-relatorio {
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #000;
-  border: 2px solid #00CC66;
-  border-radius: 16px;
-  box-shadow: 0 0 20px #00FF88; /* Neon em volta do bloco */
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 600px; /* Mas não ultrapassa 600px em telas maiores */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding: 2rem; /* Espaçamento interno */
+  background-color: #000; /* Fundo preto */
+  border: 2px solid #00CC66; /* Borda verde suave */
+  border-radius: 16px; /* Cantos arredondados */
+  box-shadow: 0 0 20px #00FF88; /* Efeito neon */
+  box-sizing: border-box; /* Inclui padding e border dentro da largura total */
 }
 
+/* Títulos dentro do bloco de progresso.
+   Define espaçamento, cor, peso da fonte e tamanho da fonte. */
 .bloco-relatorio h3 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #00FF88;
+  color: #00FF88; /* Verde neon */
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-/* Estrutura da barra (fundo escuro e borda) */
+/* Estrutura externa da barra de progresso.
+   Define altura, fundo escuro e uma borda arredondada para o contorno. */
 .barra-externa {
   width: 100%;
-  background-color: #111; /* Tom acima do preto para contraste */
+  background-color: #111; /* Tom levemente mais claro que o fundo */
   border: 1px solid #00CC66;
   border-radius: 8px;
   height: 20px;
   margin-bottom: 1rem;
 }
 
-/* Barra preenchida, com brilho e gradiente */
+/* Parte preenchida da barra (progresso real).
+   Usa gradiente, brilho e transição suave para simular movimento. */
 .barra-interna {
   height: 100%;
-  background: linear-gradient(90deg, #00FF88, #00CC66);
-  border-radius: 8px 0 0 8px;
-  transition: width 0.8s ease-in-out;
-  box-shadow: 0 0 6px #00FF88;
+  background: linear-gradient(90deg, #00FF88, #00CC66); /* Efeito gradiente horizontal */
+  border-radius: 8px 0 0 8px; /* Arredonda apenas o lado esquerdo */
+  transition: width 0.8s ease-in-out; /* Suaviza o preenchimento ao mudar */
+  box-shadow: 0 0 6px #00FF88; /* Efeito neon mais leve */
 }
 
-/* Classes separadas para controlar o progresso de cada área */
-.nivel-si    { width: 30%; }
-.nivel-java  { width: 11%; }
-.nivel-redes { width: 30%; }
+/* Classes específicas para definir o "nível" de preenchimento de cada barra */
+.nivel-si    { width: 30%; } /* Segurança da Informação */
+.nivel-java  { width: 11%; } /* Java */
+.nivel-redes { width: 30%; } /* Redes */
+
+/* ----------- RESPONSIVIDADE PARA CELULARES ----------- */
+
+/* Define como o bloco de progresso se comporta em telas pequenas (até 480px).
+   Ajusta padding, tamanho da fonte e largura para melhor encaixe visual. */
+@media (max-width: 480px) {
+  .bloco-relatorio {
+    padding: 1.2rem;       /* Menor espaçamento interno */
+    margin: 1rem auto;     /* Espaço acima/abaixo */
+    width: 90%;            /* Largura relativa menor para caber na tela */
+  }
+
+  .bloco-relatorio h3 {
+    font-size: 1rem;       /* Fonte menor para não quebrar em várias linhas */
+    word-break: break-word; /* Evita que palavras longas ultrapassem os limites */
+  }
+
+  .barra-externa {
+    height: 16px;          /* Barra mais fina para economizar espaço */
+  }
+}
 
 /* ---------- LINKS ---------- */
 
