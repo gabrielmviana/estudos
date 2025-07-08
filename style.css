@@ -1,20 +1,27 @@
-/* Importa a fonte IBM Plex Mono do Google Fonts */
+/* Importa a fonte hacker-like */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
+/* ---------- GLOBAL ---------- */
 body {
   font-family: "IBM Plex Mono", monospace;
   margin: 0;
   padding: 0;
-  background-color: #000000;
+  background-color: #000;
   color: #00FF88;
 }
 
-header {
-  background-color: #000000;
-  color: #00FF88;
-  padding: 2rem;
+/* ---------- ESTRUTURA ---------- */
+header, footer {
   text-align: center;
+  background-color: #000;
+  padding: 2rem;
   border-bottom: 2px solid #00CC66;
+}
+
+footer {
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #00CC66;
 }
 
 main {
@@ -22,25 +29,21 @@ main {
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
-footer {
-  background-color: #000000;
+section h2 {
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: #00FF88;
-  border-top: 1px solid #00CC66;
 }
 
-/* Área de postagens */
+/* ---------- POSTAGENS ---------- */
 #postagens {
-  padding: 2rem;
   text-align: center;
 }
 
-/* Layout responsivo dos cards */
 .grid-postagens {
   display: flex;
   flex-wrap: wrap;
@@ -49,9 +52,7 @@ footer {
   margin-top: 1.5rem;
 }
 
-/* Estilo dos cards */
 .card {
-  font-family: "IBM Plex Mono", monospace;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +60,7 @@ footer {
   height: 120px;
   border: 2px solid #00CC66;
   border-radius: 12px;
-  background-color: #000000;
+  background-color: #000;
   color: #00FF88;
   font-size: 1.2em;
   font-weight: bold;
@@ -67,19 +68,11 @@ footer {
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 8px transparent;
-}
-
-.card div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  animation: floatCard 3s ease-in-out infinite;
 }
 
 .card h3 {
   margin: 0;
-  font-family: "IBM Plex Mono", monospace;
   text-decoration: none;
 }
 
@@ -92,31 +85,30 @@ footer {
   transform: scale(0.98);
 }
 
-/* Remove sublinhado em todos os estados */
-.card:link, .card:visited, .card:hover, .card:active {
+.card:link,
+.card:visited,
+.card:hover,
+.card:active {
   text-decoration: none;
 }
 
-/* Efeito de flutuação contínuo (opcional) */
+/* ---------- ANIMAÇÃO ---------- */
 @keyframes floatCard {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
-.card {
-  animation: floatCard 3s ease-in-out infinite;
-}
 
-/* BLOCO DO RELATÓRIO DE PROGRESSO */
+/* ---------- PROGRESSO ---------- */
 #progresso {
-  margin-top: 3rem;
   text-align: center;
 }
 
 .bloco-relatorio {
   width: 90%;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 1.5rem;
-  background-color: #000000;
+  padding: 2rem;
+  background-color: #000;
   border: 2px solid #00CC66;
   border-radius: 16px;
   box-shadow: 0 0 20px #00FF88;
@@ -130,7 +122,7 @@ footer {
   font-size: 1.2rem;
 }
 
-/* Barra de progresso */
+/* Estilo da barra de progresso externa */
 .barra-externa {
   width: 100%;
   background-color: #111;
@@ -140,21 +132,21 @@ footer {
   margin-bottom: 1rem;
 }
 
+/* Estilo da barra de progresso interna */
 .barra-interna {
   height: 100%;
   background: linear-gradient(90deg, #00FF88, #00CC66);
-  box-shadow: 0 0 6px #00FF88;
   border-radius: 8px 0 0 8px;
+  transition: width 0.8s ease-in-out;
+  box-shadow: 0 0 6px #00FF88;
 }
 
-section h2 {
-  text-align: center;
+/* Níveis personalizados por habilidade */
+.nivel-si    { width: 60%; }
+.nivel-java  { width: 45%; }
+.nivel-redes { width: 50%; }
+
+/* Links visuais (como e-mail) */
+a {
   color: #00FF88;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-section:not(:last-child) {
-  border-bottom: 1px solid #00CC66;
-  padding-bottom: 2rem;
 }
