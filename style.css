@@ -1,16 +1,20 @@
+/* Importa a fonte IBM Plex Mono do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "IBM Plex Mono", monospace;
   margin: 0;
   padding: 0;
   background-color: #000000;
-  color: #00c000;
+  color: #00FF88;
 }
 
 header {
   background-color: #000000;
-  color: #00c000;
+  color: #00FF88;
   padding: 2rem;
   text-align: center;
+  border-bottom: 2px solid #00CC66;
 }
 
 main {
@@ -26,14 +30,17 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  color: #00c000; /* Se quiser o texto do footer verde também */
+  color: #00FF88;
+  border-top: 1px solid #00CC66;
 }
 
+/* Área de postagens */
 #postagens {
   padding: 2rem;
   text-align: center;
 }
 
+/* Layout responsivo dos cards */
 .grid-postagens {
   display: flex;
   flex-wrap: wrap;
@@ -42,23 +49,24 @@ footer {
   margin-top: 1.5rem;
 }
 
-/* Aplica o estilo ao <a class="card"> */
+/* Estilo dos cards */
 .card {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "IBM Plex Mono", monospace;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 260px;
   height: 120px;
-  border: 2px solid #00c000;
+  border: 2px solid #00CC66;
   border-radius: 12px;
   background-color: #000000;
-  color: #00c000;
+  color: #00FF88;
   font-size: 1.2em;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px transparent;
 }
 
 .card div {
@@ -69,25 +77,33 @@ footer {
   justify-content: center;
 }
 
+.card h3 {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 14px #00FF88;
+}
+
 .card:active {
   transform: scale(0.98);
 }
 
-/* NOVO - garante que o texto interno (h3) também não seja sublinhado */
-.card h3 {
-  margin: 0;
-  font-family: "Courier New", Courier, monospace;
-  text-decoration: none;
-}
-
-/* OPCIONAL - remove sublinhado do link se o navegador insistir */
+/* Remove sublinhado em todos os estados */
 .card:link, .card:visited, .card:hover, .card:active {
   text-decoration: none;
 }
 
+/* Efeito de flutuação contínuo (opcional) */
+@keyframes floatCard {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
 
-.card:hover {
-  transform: scale(1.05);
-  animation: none; /* Pausa a flutuação durante o hover*/
-  box-shadow: 0 0 12px #00c000;
+.card {
+  animation: floatCard 3s ease-in-out infinite;
 }
